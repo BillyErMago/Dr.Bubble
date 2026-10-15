@@ -1,29 +1,83 @@
-##### Come avviare il gioco
+<div align="center">
 
-Per avviare il gioco basta eseguire il file Dr.Bubble.jar.  
-Al primo avvio del gioco viene creato un file preferences all'interno della macchinina dove verranno salvate le impostazioni di default del gioco, i comandi e il livello del volume della musica e delle animazioni.  
-L'utente, tramite la voce Personalize accessibile dal menù principale, potrà impostare sfondo, cannone e nome giocatore.
+# 🫧 Dr. Bubble
 
-##### Comandi di default
+**A retro-style arcade Bubble Shooter game built with pure Java.**
 
-- Up:  ^
-- Down: v       
-- Fire: click mouse
-- Select: Enter
-- Pause: Esc  
-- Level start: 1 
-- Number of levels: 2
-- Volume:	80  
-- Effects: 80  
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Platform](https://img.shields.io/badge/Platform-Cross--Platform-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
-##### Come aggiungere ulteriori livelli
+</div>
 
-Per aggiungere un livello bisogna creare un file .java, nominarlo come nome livello e andare a modificare la classe GameStateManager
-aggiungendo il nuovo stato.  
-In seguito bisogna aggiungere i path delle immagini del mondo e del cannone in corrispondenza al numero del livello nell'array di stringhe presente nel GameStateManager, quindi :  
-bgPath - cannonPath
+---
 
+## 📖 Overview
 
+**Dr. Bubble** is an arcade game inspired by the classic *Bubble Shooter*. Aim the cannon, match colored bubbles, and clear the board across multiple customizable levels.
 
+This project was developed in Java, demonstrating core Object-Oriented Programming (OOP) concepts, a custom game-loop, and dynamic state management.
 
+---
 
+## ✨ Key Features
+
+- 🎯 **Classic Arcade Mechanics:** Accurate trajectory calculations, bubble collision detection, and chain popping.
+- 🎨 **Customizable Gameplay:** Personalize cannon skins, background themes, and player profiles from the in-game settings.
+- 💾 **Persistent Settings:** Game audio levels, keybindings, and preferences are automatically saved locally.
+- 🛠️ **Extensible Level Design:** Modular architecture allows new levels and custom worlds to be added easily.
+
+---
+
+## 🎮 Controls
+
+| Action | Default Key / Input |
+| :--- | :--- |
+| **Aim Up** | `^` (Up Arrow) |
+| **Aim Down** | `v` (Down Arrow) |
+| **Fire Bubble** | `Left Mouse Click` |
+| **Select / Confirm** | `Enter` |
+| **Pause Menu** | `Esc` |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Java Development Kit (JDK) 8 or higher](https://www.oracle.com/java/technologies/downloads/) installed.
+
+### Run the pre-built JAR
+You can play immediately without compiling the source code:
+
+```bash
+# Clone the repository
+git clone https://github.com/BillyErMago/Dr.Bubble.git
+cd Dr.Bubble
+
+# Run the executable JAR
+java -jar Dr.Bubble.jar
+```
+
+*Note: On the first launch, a local preferences file will be generated automatically to store your default audio settings and bindings.*
+
+---
+
+## 🛠️ How to Add New Levels
+
+The project uses a custom `GameStateManager` to manage game states and assets:
+
+1. Create a new `.java` level class inside `src/` following the existing level structure.
+2. Register the new state in `GameStateManager.java`.
+3. Link the respective background and cannon asset paths:
+   ```java
+   // Example mapping in GameStateManager
+   bgPath = "Resources/backgrounds/level_X.png";
+   cannonPath = "Resources/cannons/cannon_X.png";
+   ```
+
+---
+
+## 👤 Author
+
+- **Billal Nadi** - [BillyErMago](https://github.com/BillyErMago)
+```
