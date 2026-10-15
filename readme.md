@@ -80,4 +80,3 @@ The project uses a custom `GameStateManager` to manage game states and assets:
 ## 👤 Author
 
 - **Billal Nadi** - [BillyErMago](https://github.com/BillyErMago)
-```
